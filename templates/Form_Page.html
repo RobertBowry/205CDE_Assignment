@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS_Files/Form_Page.css">
+</head>
+
+<body>
+    
+    <header class="mainheader">
+        <nav><ul>
+            <li class="link"><a href="/templates/Home_Page.html">Home</a></li>
+            <li class="link"><a href="/templates/Portfolio_Page.html">Portfolio</a></li>
+            <li class="link"><a href="/templates/CV_Page.html">CV</a></li>
+            <li class="link"><a href="/templates/AboutMe_Page.html">About Me</a></li>
+            <li class="link"><a href="/templates/Contact_Page.html">Contact</a></li>
+            <li class="link"><a href="/templates/Form_Page.html">Feedback</a></li>
+        </ul></nav>
+    </header>
+
+<form action="" method="post">
+    <label for="nameId">Name:</label>
+    <br>
+    <input type="text" name="name" id="nameId">
+    <br>
+    <label for="commentsId">Comments:</label>
+    <br>
+    <textarea name="comments" id="commentsId" cols="30" rows="10"></textarea>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if name %}
+    <b><p><font color = "40E0D0"> Your name is: {{ name }}</p></b>
+    <b><p><font color = "40E0D0">and your comments are: {{ comments }}</p></b>
+    <b><p><font color = "40E0D0">A big thank you!</p></b>
+{% endif %}
+
+</body>
+
+</html>
